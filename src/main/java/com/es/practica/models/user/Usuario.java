@@ -23,6 +23,16 @@ public class Usuario implements Serializable {
 
     private boolean estado;
 
+    private String imagenPath;
+
+    @Transient
+    private String imagenUrl;
+
+    private String pdfPath;
+
+    @Transient
+    private String pdfUrl;
+
 
 
 }
