@@ -15,7 +15,7 @@ import java.util.UUID;
 
 @Service
 public class S3Service {
-    private final static String BUCKET = "springboot1bucket";
+    private final static String BUCKET = "springboots3bucket";
 
     @Autowired
     private AmazonS3Client amazonS3Client;

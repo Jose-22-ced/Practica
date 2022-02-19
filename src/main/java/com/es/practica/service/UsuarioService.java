@@ -41,8 +41,8 @@ public class UsuarioService {
     public List<Usuario> verUsuarios(){
         return usuarioRepository.findAll()
                 .stream()
-                .peek(usuario -> usuario.setImagenUrl(s3Service.getObjectUrl(usuario.getImagenPath())))
-                .peek(usuario -> usuario.setPdfUrl(s3Service.getObjectUrl(usuario.getPdfPath())))
+                .peek(usuario -> usuario.setImagenUrl(s3Service.getObjectUrl(usuario.getFoto())))
+                .peek(usuario -> usuario.setPdfUrl(s3Service.getObjectUrl(usuario.getCedula())))
                 .collect(Collectors.toList());
     }
     public Usuario verUsuariosbyId(Long id){
